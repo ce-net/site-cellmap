@@ -5,6 +5,7 @@ api = "site.cellmap"
 crate = "site-cellmap"
 args = ["serve"]
 kind = "function"
+owner = "foreman/lead"
 keep = true  # its background probe must keep running
 depends_on = []
 
