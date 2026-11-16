@@ -19,3 +19,16 @@ restart_backoff_ms = [1000, 300000]
 
 [limits]
 disk_bytes = "64M"
+
+[stamp]
+id = "cell:site.cellmap"
+kind = "cell"
+path = "cell.toml"
+updated_at = 2026-11-16T01:24:42Z
+version = "0.2"
+access = "public"
+canonical_of = []
+duplicate_of = ""
+owner = "foreman/lead"
+source_of_truth = "https://github.com/ce-net/site-cellmap"
+stale_after = 180
