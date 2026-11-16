@@ -1,0 +1,20 @@
+# One repo = one cell = one function. Every cell of every ce-net cell system, per node: wanted against running,
+# source and commit, drift. The Core tab of apps.ce-net.com and the control room's cells slot (SITES-ON-CELLS.md 8).
+[cell]
+api = "site.cellmap"
+crate = "site-cellmap"
+args = ["serve"]
+kind = "function"
+keep = true  # its background probe must keep running
+depends_on = []
+
+[launch]
+health = "HealthOp"
+start_timeout_ms = 5000
+restart_backoff_ms = [1000, 300000]
+
+[placement]
+# the CORE system in repo:ce-net-net (replicas 2)
+
+[limits]
+disk_bytes = "64M"

@@ -1,0 +1,10 @@
+[package]
+name = "site-cellmap-api"
+version = "0.1.0"
+description = "site.cellmap@1: every cell of every ce-net cell system, per node, wanted against running"
+edition.workspace = true
+license.workspace = true
+publish.workspace = true
+
+[dependencies]
+ce-wire = { workspace = true, features = ["client"] }

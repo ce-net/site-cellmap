@@ -1,0 +1,23 @@
+[package]
+name = "site-cellmap"
+version = "0.1.0"
+description = "The site.cellmap cell: every cell of every ce-net cell system, per node"
+edition.workspace = true
+license.workspace = true
+publish.workspace = true
+
+[[bin]]
+name = "site-cellmap"
+path = "src/main.rs"
+
+[lib]
+path = "src/lib.rs"
+
+[dependencies]
+site-cellmap-api = { path = "../site-cellmap-api" }
+ce-net-net = { workspace = true }
+cr-sources = { workspace = true }
+ui-chain = { workspace = true }
+ce-wire = { workspace = true, features = ["server", "client"] }
+ce-gate = { workspace = true }
+tokio = { version = "1", features = ["rt", "rt-multi-thread", "macros", "time", "sync"] }

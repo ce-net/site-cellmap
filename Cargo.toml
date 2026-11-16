@@ -1,0 +1,25 @@
+[workspace]
+resolver = "2"
+members = ["crates/site-cellmap-api", "crates/site-cellmap"]
+
+[workspace.package]
+edition = "2021"
+license = "Apache-2.0"
+publish = false
+
+[workspace.dependencies]
+ce-wire = { git = "https://github.com/Leif-Rydenfalk/rust-stack", rev = "d283bd528f96effabcf4dec56eb4fad1bec08d27" }
+ce-gate = { git = "https://github.com/Leif-Rydenfalk/rust-stack", rev = "d283bd528f96effabcf4dec56eb4fad1bec08d27" }
+ui-chain = { git = "https://github.com/ce-net/ui-cells", rev = "103703220a8554d07af1ed6a1eea5ef0e5a72090" }
+
+[profile.release]
+lto = "thin"
+codegen-units = 16
+
+[workspace.dependencies.ce-net-net]
+git = "https://github.com/ce-net/ce-net-net"
+rev = "1e39b62f509c3644f5b0902a72c1601eb14bcac5"
+
+[workspace.dependencies.cr-sources]
+git = "https://github.com/Leif-Rydenfalk/cr-sources"
+rev = "8b085433cc1f51d5965e8cb4aa1c45379c56777c"
